@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - keras >=2.0.0
-    - opencv >=4.1
+    - keras
+    - opencv
     - pip
-    - python >=3.4
+    - python
   run:
-    - keras >=2.0.0
-    - opencv >=4.1
-    - python >=3.4
+    - keras
+    - opencv
+    - python
  
 
 test:
