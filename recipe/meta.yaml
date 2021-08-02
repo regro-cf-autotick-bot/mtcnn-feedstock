@@ -16,14 +16,19 @@ build:
 
 requirements:
   host:
-    - keras
-    - opencv
+    # - keras
+    # - opencv
     - pip
     - python
   run:
     - keras
     - opencv
     - python
+    - h5py
+    - numpy
+    - scipy
+    - pyyaml
+    - six
  
 
 test:
