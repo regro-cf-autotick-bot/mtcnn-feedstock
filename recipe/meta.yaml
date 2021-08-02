@@ -16,8 +16,6 @@ build:
 
 requirements:
   host:
-    # - keras
-    # - opencv
     - pip
     - python
   run:
