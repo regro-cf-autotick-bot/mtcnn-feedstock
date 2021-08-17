@@ -1,5 +1,5 @@
 {% set name = "mtcnn" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,23 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 56624f08e088e5cf062de8005df09696cdbc0f4c2fc3578483b19e0fb3984252
+  sha256: d0957274584be62cb83d4a089041f8ee3cf3b1893e45f01ed3356f94a381302b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - keras >=2.0.0
-    - opencv >=4.1
     - pip
-    - python >=3.4
+    - python >=3.6
   run:
-    - keras >=2.0.0
-    - opencv >=4.1
-    - python >=3.4
+    - keras
+    - opencv
+    - python >=3.6
+    - h5py
+    - numpy
+    - scipy
+    - pyyaml
+    - six
+ 
 
 test:
   imports:
