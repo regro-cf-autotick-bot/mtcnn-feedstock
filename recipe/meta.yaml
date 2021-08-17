@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - keras
     - opencv
-    - python
+    - python >=3.6
     - h5py
     - numpy
     - scipy
