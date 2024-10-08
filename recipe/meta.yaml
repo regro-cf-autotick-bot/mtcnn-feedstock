@@ -1,5 +1,5 @@
 {% set name = "mtcnn" %}
-{% set version = "0.1.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d0957274584be62cb83d4a089041f8ee3cf3b1893e45f01ed3356f94a381302b
+  sha256: 08428bf8e1ae9827d43a40bb0246b57f2239e3572d3742f472ae9924896c6419
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - scipy
     - pyyaml
     - six
- 
+
 
 test:
   imports:
