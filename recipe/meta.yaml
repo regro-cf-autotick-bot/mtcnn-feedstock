@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d0957274584be62cb83d4a089041f8ee3cf3b1893e45f01ed3356f94a381302b
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - keras
     - opencv
-    - python >=3.6
+    - python >={{ python_min }}
     - h5py
     - numpy
     - scipy
@@ -30,6 +30,8 @@ requirements:
  
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mtcnn
     - mtcnn.exceptions
